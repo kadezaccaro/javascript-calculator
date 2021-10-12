@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-family: "Teko", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #1c1c36;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  width: 500px;
+  margin: 0 auto;
+  gap: 2px;
+}
+
+button {
+  height: 100px;
+  font-size: 34px;
+  background-color: #474787;
+  outline-style: none;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #39396c;
+  color: white;
+}
+button:active {
+  background-color: #2b2b51;
+}
+
+#store-equation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  grid-column: span 4;
+  text-align: right;
+  padding: 20px 20px 0px 20px;
+  font-size: 34px;
+  line-height: 34px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#display {
+  position: relative;
+  grid-column: span 4;
+  border: 5px solid #474787;
+  border-radius: 5px;
+  text-align: right;
+  padding: 60px 20px 20px 20px;
+  font-size: 55px;
+  line-height: 55px;
+  color: white;
+  min-height: 165px;
+}
+#equation-display {
+  position: absolute;
+  text-align: right;
+  top: 0;
+  right: 0;
+  padding: 20px 20px 0px 20px;
+}
+#result-display {
+  color: #34ace0;
+  padding: 20px 0px 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.light-btn {
+  background-color: #706fd3;
+}
+.light-btn:hover {
+  background-color: #39396c;
+}
+.light-btn:active {
+  background-color: #2b2b51;
+}
+
+#zero {
+  grid-column: span 2;
+}
+
+#clear {
+  grid-column: span 2;
+  background-color: #33d9b2;
+}
+#clear:hover {
+  background-color: #29ae8e;
+}
+#clear:active {
+  background-color: #1f826b;
+}
+
+#equals {
+  grid-row: 5 / span 2;
+  grid-column: 4;
+  height: 202px;
+  background-color: #34ace0;
+}
+#equals:hover {
+  background-color: #2a8ab3;
+}
+#equals:active {
+  background-color: #1f6786;
 }
