@@ -115,3 +115,22 @@ button:active {
 #equals:active {
   background-color: #1f6786;
 }
+
+@media only screen and (max-width: 600px) {
+  main {
+    height: 100%;
+  }
+
+  .grid-container {
+    padding: 25px;
+    height: 100%;
+  }
+
+  #store-equation {
+    padding: 60px 50px 50px 50px;
+  }
+
+  #display {
+    font-size: 34px;
+  }
+}
